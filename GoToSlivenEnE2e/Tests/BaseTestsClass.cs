@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoToSlivenEnE2e.Tests
+namespace GoToSlivenEnE2e.Tests;
+
+internal class BaseTestsClass
 {
-    internal class BaseTests
-    {
-    }
 }
