@@ -1,17 +1,17 @@
+using GoToSlivenEnE2e.Tests;
+
 namespace GoToSlivenEnE2e
 {
-    public class TestOfTest
+    public class TestOfTest :BaseTestsClass
     {
-        [SetUp]
-        public void Setup()
-        {
-
-        }
-
         [Test]
-        public void Test1()
+        public void TestTest()
         {
+            //A test with development test's purposes only
+
             Assert.Pass();
         }
+        
+       
     }
 }

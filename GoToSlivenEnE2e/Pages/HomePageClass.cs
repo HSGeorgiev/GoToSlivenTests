@@ -7,11 +7,20 @@ using System.Threading.Tasks;
 
 namespace GoToSlivenEnE2e.Pages;
 
-internal class HomePageClass : BaseClass
+public class HomePageClass : BaseElementsClass
 {
     public HomePageClass(IWebDriver driver) : base(driver)
     {
     }
+
+    public void GoToHomePage()
+    {
+        driver.Navigate().GoToUrl(baseUrl);
+    }
+
+
+
+
 
 
 }

@@ -5,9 +5,9 @@ using SeleniumExtras.WaitHelpers;
 
 namespace GoToSlivenEnE2e.Pages
 {
-    internal class BaseClass
+    public class BaseClass
     {
-        public string baseUrl => "https://www.goto-sliven.com/en/";
+        protected string baseUrl => "https://gotosliven.com/";
 
         protected readonly IWebDriver driver;
         protected WebDriverWait wait;
@@ -15,10 +15,10 @@ namespace GoToSlivenEnE2e.Pages
         public BaseClass(IWebDriver driver)
         {
             this.driver = driver;
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
         }
 
-        protected IWebElement FindElement(By by)
+        public IWebElement FindElement(By by)
         {
             return wait.Until(ExpectedConditions.ElementIsVisible(by));
         }
@@ -28,7 +28,7 @@ namespace GoToSlivenEnE2e.Pages
             return driver.FindElements(by);
         }
 
-        protected void Click(By by)
+        public void Click(By by)
         {
             FindElement(by).Click();
         }
