@@ -8,4 +8,6 @@ namespace GoToSlivenEnE2e.Tests;
 
 internal class BaseTestsClass
 {
+
+
 }

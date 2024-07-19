@@ -1,6 +1,6 @@
 namespace GoToSlivenEnE2e
 {
-    public class Tests
+    public class TestOfTest
     {
         [SetUp]
         public void Setup()
