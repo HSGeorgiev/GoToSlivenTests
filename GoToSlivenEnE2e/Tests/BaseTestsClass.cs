@@ -16,7 +16,7 @@ public class BaseTestsClass
         options.AddArgument("--start-maximized");
         options.AddUserProfilePreference("profile.password_manager_enabled", false);
         // Comment folowing to use normal browser
-        options.AddArgument("--headless");
+        //options.AddArgument("--headless");
         driver = new ChromeDriver(options);
         driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
     }

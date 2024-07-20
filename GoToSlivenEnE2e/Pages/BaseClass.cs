@@ -15,7 +15,7 @@ namespace GoToSlivenEnE2e.Pages
         public BaseClass(IWebDriver driver)
         {
             this.driver = driver;
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
         }
 
         public IWebElement FindElement(By by)
