@@ -152,7 +152,7 @@ public class HomePageClass : BaseElementsClass
     public bool BlogArticleSubHeadingIsProper()
     {
         string currentElementText = GetText(blogArticleSubHeaging);
-        Console.WriteLine(currentElementText);
+
         if (currentElementText == "Blog & Article")
         {
             return true;
@@ -166,8 +166,8 @@ public class HomePageClass : BaseElementsClass
     public bool AboutUsH6SubHeadingIsProper()
     {
         string currentElementText = GetText(aboutUsH6Heading);
-        Console.WriteLine(currentElementText);
-        if (currentElementText == "About us")
+
+        if (currentElementText == "ABOUT US")
         {
             return true;
         }
@@ -180,8 +180,8 @@ public class HomePageClass : BaseElementsClass
     public bool DestanationSlivenH6SubHeadingIsProper()
     {
         string currentElementText = GetText(destanationSlivenH6Heading);
-        Console.WriteLine(currentElementText);
-        if (currentElementText == "Destination Sliven")
+
+        if (currentElementText == "DESTINATION SLIVEN")
         {
             return true;
         }
@@ -194,8 +194,8 @@ public class HomePageClass : BaseElementsClass
     public bool WhyChooseUsH6SubHeadingIsProper()
     {
         string currentElementText = GetText(whyChooseUsH6Heading);
-        Console.WriteLine(currentElementText);
-        if (currentElementText == "why choose us")
+
+        if (currentElementText == "WHY CHOOSE US")
         {
             return true;
         }
@@ -208,8 +208,8 @@ public class HomePageClass : BaseElementsClass
     public bool NewsUsH6SubHeadingIsProper()
     {
         string currentElementText = GetText(newsH6Heading);
-        Console.WriteLine(currentElementText);
-        if (currentElementText == "News")
+
+        if (currentElementText == "NEWS")
         {
             return true;
         }

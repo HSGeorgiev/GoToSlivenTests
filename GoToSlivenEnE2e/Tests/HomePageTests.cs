@@ -55,6 +55,27 @@ namespace GoToSlivenEnE2e.Tests
 
         }
 
+        private void TestH6SubHeads()
+        {
+            HomePageClass homePage = new HomePageClass(driver);
+
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.AboutUsH6SubHeadingIsProper(),
+                "'About Us' H6 sub-heading is missing or wrong");
+
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.DestanationSlivenH6SubHeadingIsProper(),
+                "'Destination Sliven' sub-heading is missing or wrong");
+
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.WhyChooseUsH6SubHeadingIsProper(),
+                "'Why Choose Us' H6 sub-heading is missing or wrong");
+
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.NewsUsH6SubHeadingIsProper(),
+                "'News' H6 sub-heading is missing or wrong");
+        }
+
         [Test]
         public void HomePage_MainMenu_ShouldBeVisible()
         {
@@ -88,6 +109,12 @@ namespace GoToSlivenEnE2e.Tests
         public void SubHeadings_Should_Be_Presented()
         {
             TestSubHeadings();
+        }
+
+        [Test]
+        public void H6_SubHeads_Should_Be_Presented()
+        {
+            TestH6SubHeads();
         }
 
     }
