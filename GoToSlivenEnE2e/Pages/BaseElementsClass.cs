@@ -47,6 +47,12 @@ namespace GoToSlivenEnE2e.Pages
                 && FindElement(usefullLinkElement).Displayed);
         }
 
+        public bool IsFooterLinksDisplayed()
+        {
+            return (FindElement(privacyPolicyLinkElement).Displayed
+                && FindElement(termsOfUseLinkElement).Displayed);
+        }
+
         // Check if all main menu links work properly
         public bool AttractionsLinkIsProper()
         {

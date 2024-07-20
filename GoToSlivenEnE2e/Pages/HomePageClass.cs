@@ -27,6 +27,8 @@ public class HomePageClass : BaseElementsClass
     private readonly By whyChooseUsH6Heading = By.XPath("(//h6)[3]");
     private readonly By newsH6Heading = By.XPath("(//h6)[4]");
 
+
+
     public void GoToHomePage()
     {
         driver.Navigate().GoToUrl(baseUrl);
