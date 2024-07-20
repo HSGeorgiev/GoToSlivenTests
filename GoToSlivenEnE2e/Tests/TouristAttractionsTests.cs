@@ -86,6 +86,16 @@ namespace GoToSlivenEnE2e.Tests
         }
 
         [Test]
+        public void AttractionPage_FooterLinks_ShouldBeVisible()
+        // At the moment of the writing of this test, the links are not included, so the test fails
+        {
+            var attractionPage = new TouristAttractionsPageClass(driver);
+            attractionPage.GoToAttractionsPage();
+            Assert.That(attractionPage.IsFooterLinksDisplayed(), Is.True,
+                "Footer links are not displayed");
+        }
+
+        [Test]
         public void MainMenu_Links_Should_Works_Properly()
         {
             TestMainMenuLinks();
@@ -93,6 +103,7 @@ namespace GoToSlivenEnE2e.Tests
 
         [Test]
         public void Footer_Links_Should_Works_Properly()
+        // At the moment of the writing of this test, the links are not included, so the test fails
         {
             TestFooterLinks();
         }

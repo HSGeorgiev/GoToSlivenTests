@@ -157,6 +157,16 @@ namespace GoToSlivenEnE2e.Tests
         }
 
         [Test]
+        public void HomePage_FooterLinks_ShouldBeVisible()
+        {
+            HomePageClass homePage = new HomePageClass(driver);
+            homePage.GoToHomePage();
+            Assert.That(homePage.IsFooterLinksDisplayed(), Is.True,
+                "Footer links are not displayed");
+        }
+
+
+        [Test]
         public void MainMenu_Links_Should_Works_Properly()
         {
             TestMainMenuLinks();
