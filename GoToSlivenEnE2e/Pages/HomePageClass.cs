@@ -31,7 +31,11 @@ public class HomePageClass : BaseElementsClass
     private readonly By destanationSlivenH6Heading = By.XPath("(//h6)[2]");
     private readonly By whyChooseUsH6Heading = By.XPath("(//h6)[3]");
     private readonly By newsH6Heading = By.XPath("(//h6)[4]");
-
+    // Interactivemap elements
+    private readonly By mapSearchField = By.XPath("//input[@eapps-link='search']");
+    private readonly By mapSearchButton = By.XPath("//div[@eapps-link='searchBtn']");
+    private readonly By myLocationButton = By.XPath("//div[@eapps-link='myLocation']");
+    private readonly By barToggle = By.XPath("//div[@eapps-link='barToggle']");
 
 
 
@@ -223,5 +227,21 @@ public class HomePageClass : BaseElementsClass
         }
     }
 
+    // Interactive map test methods
 
+    public bool MapControlsAreVisible()
+    {
+        return (FindElement(mapSearchField).Displayed &&
+                FindElement(mapSearchButton).Displayed &&
+                FindElement(myLocationButton).Displayed &&
+                FindElement(barToggle).Displayed);
+    }
+
+    public string GetMapSearchResult(string searchQuery)
+    {
+        Type(mapSearchField, searchQuery);
+        Click(mapSearchButton);
+        By firstResult = By.XPath("(//div[@class='eapps-google-maps-bar-list-item-info'])[1]");
+        return GetText(firstResult);
+    }
 }

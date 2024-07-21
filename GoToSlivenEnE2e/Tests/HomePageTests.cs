@@ -198,5 +198,26 @@ namespace GoToSlivenEnE2e.Tests
             TestH6SubHeads();
         }
 
+
+        [Test]
+        public void Map_Controls_ShouldBeVisible()
+        {
+            HomePageClass homePage = new HomePageClass(driver);
+            homePage.GoToHomePage();
+            Assert.That(homePage.MapControlsAreVisible(), Is.True,
+                "Map controls are not displayed");
+        }
+
+        [Test]
+        public void MapSearch_Functionality_Should_Works_Properly()
+        {
+            var homePage = new HomePageClass(driver);
+            homePage.GoToHomePage();
+            string searchQuery = "Hadzhi Dimitar";
+            string searchResult = homePage.GetMapSearchResult(searchQuery);
+            string expectedResult = "Hadzhi Dimitar House-Museum";
+            Assert.That(searchResult, Does.Contain(expectedResult), "Search results are not as expected!");
+        }
+
     }
 }
