@@ -13,9 +13,11 @@ namespace GoToSlivenEnE2e.Pages
         {
         }
 
+        private readonly string subUrl = "/tourist-attractions/";
+
         public void GoToAttractionsPage()
         {
-            driver.Navigate().GoToUrl(baseUrl + "/tourist-attractions/");
+            driver.Navigate().GoToUrl(baseUrl + subUrl);
         }
 
 

@@ -10,6 +10,11 @@ public class HomePageClass : BaseElementsClass
     {
     }
 
+    public void GoToHomePage()
+    {
+        driver.Navigate().GoToUrl(baseUrl);
+    }
+
     // Buttons
     private readonly By exploreMoreButton = By.CssSelector(".elementor-button-text");
     private readonly By eventsButton = By.XPath("//a[text()='Events']");
@@ -29,10 +34,7 @@ public class HomePageClass : BaseElementsClass
 
 
 
-    public void GoToHomePage()
-    {
-        driver.Navigate().GoToUrl(baseUrl);
-    }
+
 
     public void ClickExploreMoreButton()
     {
