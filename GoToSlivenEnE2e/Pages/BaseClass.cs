@@ -20,7 +20,7 @@ namespace GoToSlivenEnE2e.Pages
 
         public IWebElement FindElement(By by)
         {
-            IWebElement element = null;
+            IWebElement? element = null;
             try
             {
                 element = wait.Until(ExpectedConditions.ElementIsVisible(by));
