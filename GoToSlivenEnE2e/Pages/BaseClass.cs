@@ -20,7 +20,27 @@ namespace GoToSlivenEnE2e.Pages
 
         public IWebElement FindElement(By by)
         {
-            return wait.Until(ExpectedConditions.ElementIsVisible(by));
+            IWebElement element = null;
+            try
+            {
+                element = wait.Until(ExpectedConditions.ElementIsVisible(by));
+            }
+            catch (WebDriverTimeoutException ex)
+            {
+                Assert.Fail($"Element not found after timeout. Exception says: {ex.Message}");
+            }
+
+            catch (WebDriverArgumentException ex)
+            {
+                Assert.Fail($"Element not found. Exception says: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+
+            return element;
+            
         }
 
         protected ReadOnlyCollection<IWebElement> FindElements(By by)
