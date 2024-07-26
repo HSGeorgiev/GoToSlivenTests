@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 
 namespace GoToSlivenEnE2e.Pages;
 
-public class HomePageClass : BaseElementsClass
+public class HomePageClass : BasePageClass
 {
     public HomePageClass(IWebDriver driver) : base(driver)
     {

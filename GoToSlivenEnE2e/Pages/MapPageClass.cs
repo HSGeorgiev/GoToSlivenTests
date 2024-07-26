@@ -2,7 +2,7 @@
 
 namespace GoToSlivenEnE2e.Pages
 {
-    internal class MapPageClass : BaseElementsClass
+    internal class MapPageClass : BasePageClass
     {
 
         public MapPageClass(IWebDriver driver) : base(driver)

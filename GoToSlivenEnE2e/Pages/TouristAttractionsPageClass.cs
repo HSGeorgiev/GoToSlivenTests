@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GoToSlivenEnE2e.Pages
 {
-    internal class TouristAttractionsPageClass : BaseElementsClass
+    internal class TouristAttractionsPageClass : BasePageClass
     {
         public TouristAttractionsPageClass(IWebDriver driver) : base(driver)
         {

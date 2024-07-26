@@ -1,12 +1,13 @@
-﻿using OpenQA.Selenium;
+﻿using GoToSlivenEnE2e.Helpers;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using System.Xml.Linq;
 
 namespace GoToSlivenEnE2e.Pages
 {
-    public class BaseElementsClass : BaseClass
+    public class BasePageClass : DriverHelper
     {
-        public BaseElementsClass(IWebDriver driver) : base(driver)
+        public BasePageClass(IWebDriver driver) : base(driver)
         {
         }
 

@@ -3,16 +3,16 @@ using OpenQA.Selenium;
 using System.Collections.ObjectModel;
 using SeleniumExtras.WaitHelpers;
 
-namespace GoToSlivenEnE2e.Pages
+namespace GoToSlivenEnE2e.Helpers
 {
-    public class BaseClass
+    public class DriverHelper
     {
         protected string baseUrl => "https://gotosliven.com/";
 
         protected readonly IWebDriver driver;
         protected WebDriverWait wait;
 
-        public BaseClass(IWebDriver driver)
+        public DriverHelper(IWebDriver driver)
         {
             this.driver = driver;
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
@@ -40,7 +40,7 @@ namespace GoToSlivenEnE2e.Pages
             }
 
             return element;
-            
+
         }
 
         protected ReadOnlyCollection<IWebElement> FindElements(By by)
