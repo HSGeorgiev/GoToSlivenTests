@@ -1,4 +1,5 @@
-﻿using GoToSlivenEnE2e.Pages;
+﻿using GoToSlivenEnE2e.Globals;
+using GoToSlivenEnE2e.Pages;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -16,10 +17,10 @@ public class BaseTestsClass
         options.AddArgument("--start-maximized");
         options.AddUserProfilePreference("profile.password_manager_enabled", false);
         options.AddArgument("--disable-search-engine-choice-screen");
-        // Comment folowing to use normal browser
+        // Comment following to use normal browser
         //options.AddArgument("--headless");
         driver = new ChromeDriver(options);
-        driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+        driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(GlobalConstants.DEFAULT_TIMESPAN);
     }
 
 [TearDown]

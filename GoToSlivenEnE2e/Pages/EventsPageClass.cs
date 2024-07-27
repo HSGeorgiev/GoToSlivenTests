@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using GoToSlivenEnE2e.Globals;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace GoToSlivenEnE2e.Pages
 
         public void GoToEventsPage()
         {
-            driver.Navigate().GoToUrl(baseUrl + subUrl);
+            driver.Navigate().GoToUrl(GlobalConstants.BASE_URL + subUrl);
         }
 
     }

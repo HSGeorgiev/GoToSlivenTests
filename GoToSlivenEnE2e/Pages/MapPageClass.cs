@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using GoToSlivenEnE2e.Globals;
+using OpenQA.Selenium;
 
 namespace GoToSlivenEnE2e.Pages
 {
@@ -13,11 +14,12 @@ namespace GoToSlivenEnE2e.Pages
         private readonly By mapSearchButton = By.XPath("//div[@eapps-link='searchBtn']");
         private readonly By myLocationButton = By.XPath("//div[@eapps-link='myLocation']");
         private readonly By barToggle = By.XPath("//div[@eapps-link='barToggle']");
+
         private readonly string subUrl = "/interactive-map-of-sliven/";
 
         public void GoToMapPage()
         {
-            driver.Navigate().GoToUrl(baseUrl + subUrl);
+            driver.Navigate().GoToUrl(GlobalConstants.BASE_URL + subUrl);
         }
 
         public bool MapControlsAreVisible()

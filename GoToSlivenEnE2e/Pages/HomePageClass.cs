@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using GoToSlivenEnE2e.Globals;
+using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools.V125.CSS;
 using System.Collections.ObjectModel;
 
@@ -12,7 +13,7 @@ public class HomePageClass : BasePageClass
 
     public void GoToHomePage()
     {
-        driver.Navigate().GoToUrl(baseUrl);
+        driver.Navigate().GoToUrl(GlobalConstants.BASE_URL);
     }
 
     // Buttons

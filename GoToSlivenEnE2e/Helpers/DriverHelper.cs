@@ -2,20 +2,19 @@
 using OpenQA.Selenium;
 using System.Collections.ObjectModel;
 using SeleniumExtras.WaitHelpers;
+using GoToSlivenEnE2e.Globals;
 
 namespace GoToSlivenEnE2e.Helpers
 {
     public class DriverHelper
     {
-        protected string baseUrl => "https://gotosliven.com/";
-
         protected readonly IWebDriver driver;
         protected WebDriverWait wait;
 
         public DriverHelper(IWebDriver driver)
         {
             this.driver = driver;
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(GlobalConstants.DEFAULT_TIMESPAN));
         }
 
         public IWebElement FindElement(By by)
