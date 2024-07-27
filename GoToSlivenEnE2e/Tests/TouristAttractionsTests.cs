@@ -37,7 +37,7 @@ namespace GoToSlivenEnE2e.Tests
                 "'Holoday Homes' link does not work properly");
 
             atractionPage.GoToAttractionsPage();
-            Assert.IsTrue(atractionPage.HutsinkIsProper(),
+            Assert.IsTrue(atractionPage.HutsLinkIsProper(),
                 "'Huts & Cabins' link does not work properly");
 
             atractionPage.GoToAttractionsPage();

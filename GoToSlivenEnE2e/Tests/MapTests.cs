@@ -42,7 +42,7 @@ namespace GoToSlivenEnE2e.Tests
                 "'Holoday Homes' link does not work properly");
 
             mapPage.GoToMapPage();
-            Assert.IsTrue(mapPage.HutsinkIsProper(),
+            Assert.IsTrue(mapPage.HutsLinkIsProper(),
                 "'Huts & Cabins' link does not work properly");
 
             mapPage.GoToMapPage();

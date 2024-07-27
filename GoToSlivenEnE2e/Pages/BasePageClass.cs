@@ -172,7 +172,7 @@ namespace GoToSlivenEnE2e.Pages
 
         }
 
-        public bool HutsinkIsProper()
+        public bool HutsLinkIsProper()
         {
             Actions action = new Actions(driver);
             action.MoveToElement(driver.FindElement(By.XPath("//a[text()='Accommodation']"))).Perform();

@@ -72,7 +72,7 @@ namespace GoToSlivenEnE2e.Tests
         {
             EventsPageClass eventsPage = new EventsPageClass(driver);
             eventsPage.GoToEventsPage();
-            Assert.IsTrue(eventsPage.HutsinkIsProper(),
+            Assert.IsTrue(eventsPage.HutsLinkIsProper(),
                 "'Huts & Cabins' link does not work properly");
         }
 
