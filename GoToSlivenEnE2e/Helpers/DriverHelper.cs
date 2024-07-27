@@ -26,16 +26,20 @@ namespace GoToSlivenEnE2e.Helpers
             }
             catch (WebDriverTimeoutException ex)
             {
-                Assert.Fail($"Element not found after timeout. Exception says: {ex.Message}");
+                Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR: Element not found after timeout,\n" +
+                    $"set on {GlobalConstants.DEFAULT_TIMESPAN} seconds. Test says: {ex.Message}");
             }
 
-            catch (WebDriverArgumentException ex)
+            catch (InvalidSelectorException ex)
             {
-                Assert.Fail($"Element not found. Exception says: {ex.Message}");
+                Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR: 'By' argument passed to FindElement wrapper method \n" +
+                    $"is not valid. Test says: {ex.Message}");
             }
+
             catch (Exception ex)
             {
-                Assert.Fail(ex.Message);
+                Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR:  \n" +
+                    $"Test says: {ex.Message}");
             }
 
             return element;
