@@ -10,7 +10,14 @@ namespace GoToSlivenEnE2e.Tests
     internal class MapTests : BaseTestsClass
     {
         private readonly string subUrl = "/interactive-map-of-sliven/";
-        private MapPageClass mapPage;
+
+        // BaseTests Class general tests
+
+        [Test]
+        public void SiteLogo_Displayed_On_MapPage()
+        {
+            IsLogoVisible(subUrl);
+        }
 
         [Test]
         public void MapPage_MainMenu_ShouldBeVisible()
@@ -35,6 +42,10 @@ namespace GoToSlivenEnE2e.Tests
         {
             TestFooterLinks(subUrl);
         }
+
+        // MapPage Class specific tests
+
+
 
         [Test]
         public void MapPage_Map_Controls_ShouldBeVisible()

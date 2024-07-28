@@ -38,6 +38,13 @@ public class BaseTestsClass
 
     }
 
+    public void IsLogoVisible(string subUrl)
+    {
+        var basePage = new BasePageClass(driver);
+        basePage.GoToUrl(subUrl);
+        Assert.That(basePage.IsLogoDisplayedOnPage(), Is.True, "Logo is not visible");
+    }
+
     public void IsTopMenuViivble(string subUrl)
     {
         var basePage = new BasePageClass(driver);

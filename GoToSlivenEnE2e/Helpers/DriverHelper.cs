@@ -26,26 +26,26 @@ namespace GoToSlivenEnE2e.Helpers
             }
             catch (WebDriverTimeoutException ex)
             {
-                Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR: Element not found after timeout,\n" +
-                    $"set on {GlobalConstants.DEFAULT_TIMESPAN} seconds. Test says: {ex.Message}");
+                Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR: Element - {by} - not found after timeout,\n" +
+                    $"set on {GlobalConstants.DEFAULT_TIMESPAN} seconds. WebDriver says: {ex.Message}");
             }
 
             catch (InvalidSelectorException ex)
             {
                 Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR: 'By' argument passed to FindElement wrapper method - {by} \n" +
-                    $"is not valid. Test says: {ex.Message}");
+                    $"is not valid. WebDriver says: {ex.Message}");
             }
 
             catch (ElementNotVisibleException ex)
             {
                 Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR: Element is present but not visible - {by} \n" +
-                    $"is not valid. Test says: {ex.Message}");
+                    $"is not valid. WebDriver/CS says: {ex.Message}");
             }
 
             catch (Exception ex)
             {
                 Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR:  \n" +
-                    $"Test says: {ex.Message}");
+                    $"WebDriver/CS says: {ex.Message}");
             }
 
             return element;
@@ -54,9 +54,7 @@ namespace GoToSlivenEnE2e.Helpers
 
         protected ReadOnlyCollection<IWebElement> FindElements(By by)
         {
-            
-            ReadOnlyCollection<IWebElement> element = null;
-            
+                       
             try
             {
                 return driver.FindElements(by);

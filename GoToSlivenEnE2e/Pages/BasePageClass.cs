@@ -12,9 +12,8 @@ namespace GoToSlivenEnE2e.Pages
         {
         }
 
-        public BasePageClass(IWebDriver driver, string subUrl) : base(driver)
-        {
-        }
+
+
 
         // On the head of a base page
 
@@ -48,6 +47,11 @@ namespace GoToSlivenEnE2e.Pages
         {
             driver.Navigate().GoToUrl(GlobalConstants.BASE_URL + subUrl);
         }
+
+        public bool IsLogoDisplayedOnPage()
+        {
+            return (FindElement(logoElement).Displayed);
+        }
         
         public bool IsTopMenuDiplayed()
         {
@@ -59,6 +63,7 @@ namespace GoToSlivenEnE2e.Pages
                 && FindElement(usefullLinkElement).Displayed);
         }
 
+        // Check if footer links are displayed
         public bool IsFooterLinksDisplayed()
         {
             return (FindElement(privacyPolicyLinkElement).Displayed

@@ -21,6 +21,6 @@ namespace GoToSlivenEnE2e.Pages
             driver.Navigate().GoToUrl(GlobalConstants.BASE_URL + subUrl);
         }
 
-
+        // ToDo - To map specific elements on the Tourists Attractions page
     }
 }

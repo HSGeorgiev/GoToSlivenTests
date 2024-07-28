@@ -4,134 +4,46 @@ namespace GoToSlivenEnE2e.Tests
 {
     internal class HomePageTests : BaseTestsClass
     {
- 
+
+        private readonly string subUrl = "/";
+
+        // BaseTests Class general tests
+
         [Test]
-        public void AttractionLink_Should_Works_Properly()
+        public void SiteLogo_Displayed_On_HomePage()
         {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.AttractionsLinkIsProper(),
-                "'Tourist Attractions' link does not work properly");
+            IsLogoVisible(subUrl);
         }
 
         [Test]
-        public void MapLink_Should_Works_Properly()
+        public void HomePage_MainMenu_ShouldBeVisible()
         {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.MapLinkIsProper(),
-                "'Maps' link does not work properly");
+            IsTopMenuViivble(subUrl);
         }
 
         [Test]
-        public void EventsLink_Should_Works_Properly()
+        public void HomePage_MainMenu_Links_Should_Works_Properly()
         {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.EventsLinkIsProper(),
-                "'Events' link does not work properly");
+            TestMainMenuLinks(subUrl);
         }
 
         [Test]
-        public void AccommodationLink_Should_Works_Properly()
+        public void HomePage_FooteMapPage_FooterLinks_ShouldBeVisible()
         {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.AccommodationLinkIsProper(),
-                "'Accommodation' link does not work properly");
+            IsFooterLinksViivble(subUrl);
         }
 
         [Test]
-        public void HotelsLink_Should_Works_Properly()
+        public void HomePage_Footer_Links_Should_Works_Properly()
         {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.HotelsLinkIsProper(),
-                "'Hotels' link does not work properly");
-        }
-        [Test]
-        public void GuestHousesLink_Should_Works_Properly()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.GuestHousesLinkIsProper(),
-                "'Guest Houses' link does not work properly");
-        }
-        [Test]
-        public void HolidayHomesLink_Should_Works_Properly()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.HolodayHomesLinkIsProper(),
-                "'Holiday Homes' link does not work properly");
+            TestFooterLinks(subUrl);
         }
 
-        [Test]
-        public void HutsLink_Should_Works_Properly()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.HutsLinkIsProper(),
-                "'Huts & Cabins' link does not work properly");
-        }
-        [Test]
-        public void CampingsLink_Should_Works_Properly()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.CampingsLinkIsProper(),
-                "'Campsites' link does not work properly");
-        }
+     
+        // HomePage Class specific tests
 
         [Test]
-        public void RestaurantsLink_Should_Works_Properly()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.RestaurantsLinkIsProper(),
-                "'Restaurants' link does not work properly");
-        }
-        [Test]
-        public void PizzeriasLink_Should_Works_Properly()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.PizzeriasLinkIsProper(),
-                "'Pizzerias' link does not work properly");
-        }
-
-        [Test]
-        public void FastFoodLink_Should_Works_Properly()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.FastFoodLinkIsProper(),
-                "'FastFood' link does not work properly");
-        }
-
-        [Test]
-        public void UsefulLink_Should_Works_Properly()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.UsefulLinkIsProper(),
-                "'Useful' link does not work properly");
-        }
-
-        public void TestFooterLinks()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
-
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.PrivacyPolicyLinkIsProper(),
-                "'Privacy Policy' link does not work properly");
-
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.TermsOfUseLinkIsProper(),
-                "'Terms Of Use' link does not work properly");
-        }
-
-        private void TestHomePageButtons()
+        public void Both_Buttons_in_TheHead_Should_Works_Properly()
         {
             HomePageClass homePage = new HomePageClass(driver);
 
@@ -146,9 +58,11 @@ namespace GoToSlivenEnE2e.Tests
             homePage.GoToHomePage();
             Assert.IsTrue(homePage.ReadMoreButtonWorksProper(),
                 "'Read more' button on The Home page does not work properly");
+
         }
 
-        private void TestSubHeadings()
+        [Test]
+        public void SubHeadings_Should_Be_Presented()
         {
             HomePageClass homePage = new HomePageClass(driver);
 
@@ -178,10 +92,10 @@ namespace GoToSlivenEnE2e.Tests
             homePage.GoToHomePage();
             Assert.IsTrue(homePage.BlogArticleSubHeadingIsProper(),
                 "'Blog and Articles' sub-heading is missing or wrong");
-
         }
 
-        private void TestH6SubHeads()
+        [Test]
+        public void H6_SubHeads_Should_Be_Presented()
         {
             HomePageClass homePage = new HomePageClass(driver);
 
@@ -200,50 +114,6 @@ namespace GoToSlivenEnE2e.Tests
             homePage.GoToHomePage();
             Assert.IsTrue(homePage.NewsUsH6SubHeadingIsProper(),
                 "'News' H6 sub-heading is missing or wrong");
-        }
-
-        [Test]
-        public void HomePage_MainMenu_ShouldBeVisible()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.That(homePage.IsTopMenuDiplayed(), Is.True, 
-                "Top menu is not displayed");
-        }
-
-        [Test]
-        public void HomePage_FooterLinks_ShouldBeVisible()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
-            homePage.GoToHomePage();
-            Assert.That(homePage.IsFooterLinksDisplayed(), Is.True,
-                "Footer links are not displayed");
-        }
-
-        [Test]
-        public void Footer_Links_Should_Works_Properly()
-        {
-            TestFooterLinks();
-        }
-
-        [Test]
-        public void Both_Buttons_in_TheHead_Should_Works_Properly()
-        {
-            TestHomePageButtons();
-            // That is about both buttons/links on the head and the
-            // 'Read more' button on Tourist Center part
-        }
-
-        [Test]
-        public void SubHeadings_Should_Be_Presented()
-        {
-            TestSubHeadings();
-        }
-
-        [Test]
-        public void H6_SubHeads_Should_Be_Presented()
-        {
-            TestH6SubHeads();
         }
 
 
