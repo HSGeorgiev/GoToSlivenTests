@@ -240,7 +240,7 @@ public class HomePageClass : BasePageClass
 
     public string GetMapSearchResult(string searchQuery)
     {
-        Type(mapSearchField, searchQuery);
+        SendKeys(mapSearchField, searchQuery);
         Click(mapSearchButton);
         By firstResult = By.XPath("(//div[@class='eapps-google-maps-bar-list-item-info'])[1]");
         return GetText(firstResult);

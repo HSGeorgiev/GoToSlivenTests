@@ -1,4 +1,5 @@
-﻿using GoToSlivenEnE2e.Helpers;
+﻿using GoToSlivenEnE2e.Globals;
+using GoToSlivenEnE2e.Helpers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using System.Xml.Linq;
@@ -8,6 +9,10 @@ namespace GoToSlivenEnE2e.Pages
     public class BasePageClass : DriverHelper
     {
         public BasePageClass(IWebDriver driver) : base(driver)
+        {
+        }
+
+        public BasePageClass(IWebDriver driver, string subUrl) : base(driver)
         {
         }
 
@@ -38,6 +43,12 @@ namespace GoToSlivenEnE2e.Pages
         private readonly By termsOfUseLinkElement = By.XPath("//span[text()='Terms of use']");
 
         // Check if main menu top-level items are displayed
+        
+        public void GoToUrl(string subUrl)
+        {
+            driver.Navigate().GoToUrl(GlobalConstants.BASE_URL + subUrl);
+        }
+        
         public bool IsTopMenuDiplayed()
         {
             return (FindElement(touristAttractionsLinkElement).Displayed

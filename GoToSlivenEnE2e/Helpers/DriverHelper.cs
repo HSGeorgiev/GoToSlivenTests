@@ -82,7 +82,7 @@ namespace GoToSlivenEnE2e.Helpers
             FindElement(by).Click();
         }
 
-        protected void Type(By by, string text)
+        protected void SendKeys(By by, string text)
         {
             IWebElement element = FindElement(by);
             element.Clear();
