@@ -35,7 +35,7 @@ namespace GoToSlivenEnE2e.Pages
         private readonly By usefullLinkElement = By.XPath("//a[text()='Useful']");
 
         // Locate the logo of the site
-        private readonly By logoElement =By.XPath("//a[@href='https://gotosliven.com']//img");
+        private readonly By logoElement =By.XPath("(//section[1]/div/div[1]/div/div/div/a/img)[1]");
 
         // On the footer of a base page
         private readonly By privacyPolicyLinkElement = By.XPath("//span[text()='Privacy Policy']");
