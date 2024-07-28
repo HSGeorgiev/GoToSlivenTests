@@ -32,7 +32,13 @@ namespace GoToSlivenEnE2e.Helpers
 
             catch (InvalidSelectorException ex)
             {
-                Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR: 'By' argument passed to FindElement wrapper method \n" +
+                Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR: 'By' argument passed to FindElement wrapper method - {by} \n" +
+                    $"is not valid. Test says: {ex.Message}");
+            }
+
+            catch (ElementNotVisibleException ex)
+            {
+                Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR: Element is present but not visible - {by} \n" +
                     $"is not valid. Test says: {ex.Message}");
             }
 
@@ -48,7 +54,27 @@ namespace GoToSlivenEnE2e.Helpers
 
         protected ReadOnlyCollection<IWebElement> FindElements(By by)
         {
-            return driver.FindElements(by);
+            
+            ReadOnlyCollection<IWebElement> element = null;
+            
+            try
+            {
+                return driver.FindElements(by);
+            }
+            catch (NoSuchElementException ex)
+            {
+                Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR: The element {by} is not found - No such element on the page.\n" +
+                    $"Test says: {ex.Message}");
+                return null;
+            }
+
+            catch (Exception ex)
+            {
+                Assert.Fail($"GO_TO_SLIVEN_TESTS_ERROR:  \n" +
+                    $"Test says: {ex.Message}");
+                return null;
+            }
+
         }
 
         public void Click(By by)
