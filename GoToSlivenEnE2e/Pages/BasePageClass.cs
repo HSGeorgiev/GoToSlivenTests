@@ -323,5 +323,11 @@ namespace GoToSlivenEnE2e.Pages
                 return false;
             }
         }
+
+        public string GetNextPageH2(By by)
+        {
+            Click(by);
+            return GetText(By.XPath("(//h2)[1]"));
+        }
     }
 }

@@ -64,7 +64,12 @@ namespace GoToSlivenEnE2e.Tests
             foreach (var hotel in hotels)
             {
                 hotelsPage.GoToHotelsPage();
-                hotelsPage.Click(hotel.Value);
+                // GetNextPageH2 first to use explicite wait first
+                string newPageTitle = hotelsPage.GetNextPageH2(hotel.Value);
+                // Have to get it clear - should be names identical or they may vary in case of UpperKeys or LowerKeys!!!
+                // The next assert will only work if we make strings case insensitive becouse of Family Hotel Kalina/Family hotel Kalina!
+                //Assert.That(newPageTitle, Does.Contain(hotel.Key), $"Wrong H2 on next page: '{hotel.Key}' link does not work properly");
+                Assert.That(newPageTitle.ToUpper(), Does.Contain(hotel.Key.ToUpper()), $"Wrong H2 heading tag on next page: '{hotel.Key}' link does not work properly");
                 Assert.That(hotelsPage.GetCurrentTitle(driver), Does.Contain(hotel.Key), $"Wrong Title tag on next page:'{hotel.Key}' link does not work properly");
             }
         }
