@@ -1,4 +1,6 @@
 ﻿using GoToSlivenEnE2e.Pages;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.Events;
 
 namespace GoToSlivenEnE2e.Tests
 {
@@ -63,7 +65,7 @@ namespace GoToSlivenEnE2e.Tests
             {
                 hotelsPage.GoToHotelsPage();
                 hotelsPage.Click(hotel.Value);
-                Assert.That(driver.Title, Does.Contain(hotel.Key), $"'{hotel.Key}' link does not work properly");
+                Assert.That(hotelsPage.GetCurrentTitle(driver), Does.Contain(hotel.Key), $"Wrong Title tag on next page:'{hotel.Key}' link does not work properly");
             }
         }
     }

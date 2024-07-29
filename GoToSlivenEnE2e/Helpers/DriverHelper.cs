@@ -75,7 +75,6 @@ namespace GoToSlivenEnE2e.Helpers
 
         }
 
-       
 
         public void Click(By by)
         {
@@ -111,6 +110,16 @@ namespace GoToSlivenEnE2e.Helpers
         {
             ReadOnlyCollection<IWebElement> element = FindElements(by);
             return element.ToArray();
+        }
+
+        public string GetCurrentUrl(IWebDriver driver)
+        {
+            return driver.Url;
+        }
+
+        public string GetCurrentTitle(IWebDriver driver)
+        {
+            return driver.Title;
         }
     }
 }
