@@ -1,9 +1,4 @@
 ﻿using GoToSlivenEnE2e.Pages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoToSlivenEnE2e.Tests
 {
@@ -32,7 +27,7 @@ namespace GoToSlivenEnE2e.Tests
         }
 
         [Test]
-        public void MapPage_FooteMapPage_FooterLinks_ShouldBeVisible()
+        public void MapPage_FooterLinks_ShouldBeVisible()
         {
             IsFooterLinksViivble(subUrl);
         }

@@ -1,7 +1,5 @@
 ﻿using GoToSlivenEnE2e.Globals;
 using OpenQA.Selenium;
-using OpenQA.Selenium.DevTools.V125.CSS;
-using System.Collections.ObjectModel;
 
 namespace GoToSlivenEnE2e.Pages;
 

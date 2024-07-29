@@ -2,7 +2,6 @@
 using GoToSlivenEnE2e.Helpers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using System.Xml.Linq;
 
 namespace GoToSlivenEnE2e.Pages
 {

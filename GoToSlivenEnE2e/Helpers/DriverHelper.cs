@@ -75,6 +75,8 @@ namespace GoToSlivenEnE2e.Helpers
 
         }
 
+       
+
         public void Click(By by)
         {
             FindElement(by).Click();
@@ -91,6 +93,24 @@ namespace GoToSlivenEnE2e.Helpers
         {
             IWebElement element = FindElement(by);
             return element.Text;
+        }
+
+        protected string[] GetWebElementTextArray(By by)
+        {
+            ReadOnlyCollection<IWebElement> element = FindElements(by);
+            IWebElement[] webElementArray = element.ToArray();
+            string[] textArray = new string[element.Count];
+            for (int i = 0; i < element.Count; i++)
+            {
+                textArray[i] = webElementArray[i].Text;
+            }
+            return textArray;
+        }
+
+        protected IWebElement[] GetWebElementArray(By by)
+        {
+            ReadOnlyCollection<IWebElement> element = FindElements(by);
+            return element.ToArray();
         }
     }
 }
