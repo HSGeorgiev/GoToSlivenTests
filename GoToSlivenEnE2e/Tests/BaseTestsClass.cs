@@ -20,7 +20,7 @@ public class BaseTestsClass
         // also some directives here are due to use of the tests on gitHub actions platform
 
 
-        //options.AddArgument("headless");
+        options.AddArgument("headless");
         options.AddArgument("no-sandbox");
         options.AddArgument("disable-dev-shm-usage");
         options.AddArgument("disable-gpu");
