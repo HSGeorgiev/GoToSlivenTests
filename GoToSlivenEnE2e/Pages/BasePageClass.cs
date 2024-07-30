@@ -19,9 +19,8 @@ namespace GoToSlivenEnE2e.Pages
         // Locate the links in the main menu
         // Actually they are a number of li elements -> //ul[@id="menu-primary-eng"]//li
 
-        private readonly By mapLinkElement = By.XPath("//a[text()='Map']");
         private readonly By touristAttractionsLinkElement = By.XPath("//a[text()='Tourist Attractions']");
-        
+        private readonly By mapLinkElement = By.XPath("//a[text()='Map']");
         private readonly By eventsLinkElement = By.XPath("//a[text()='Events']");
         private readonly By accommodationLinkElement = By.XPath("//a[text()='Accommodation']");
         private readonly By hotelsLinkElement = By.XPath("//a[text()='Hotels']");
@@ -55,8 +54,7 @@ namespace GoToSlivenEnE2e.Pages
         
         public bool IsTopMenuDiplayed()
         {
-            return (FindElement(touristAttractionsLinkElement).Displayed
-                && FindElement(mapLinkElement).Displayed
+            return (FindElement(mapLinkElement).Displayed
                 && FindElement(eventsLinkElement).Displayed
                 && FindElement(accommodationLinkElement).Displayed
                 && FindElement(restaurantsLinkElement).Displayed
