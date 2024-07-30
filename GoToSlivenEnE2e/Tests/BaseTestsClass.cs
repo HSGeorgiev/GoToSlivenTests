@@ -17,11 +17,24 @@ public class BaseTestsClass
     public void Setup()
     {
         //some options of the WebDriver we should be able to change when needed
-        options.AddArgument("--start-maximized");
+        // also some directives here are due to use of the tests on gitHub actions platform
+
+
+        //options.AddArgument("headless");
+        options.AddArgument("no-sandbox");
+        options.AddArgument("disable-dev-shm-usage");
+        options.AddArgument("disable-gpu");
+        options.AddArgument("windows-size=1920x1080");
+        //options.AddArgument("start-maximized");
+        options.AddArgument("disable-extensions");
+        options.AddArgument("remote-debugging-port=9222");
+
         options.AddUserProfilePreference("profile.password_manager_enabled", false);
         options.AddArgument("--disable-search-engine-choice-screen");
         // Comment following to use normal browser
         //options.AddArgument("--headless");
+
+
         driver = new ChromeDriver(options);
         driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(GlobalConstants.DEFAULT_TIMESPAN);
         basePage = new BasePageClass(driver);
