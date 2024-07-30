@@ -18,9 +18,9 @@ public class BaseTestsClass
     {
         //This option should be commented when running on local windows
 
-        //options.AddArgument("headless");
-        //options.AddArgument("remote-debugging-port=9222");
-        //options.AddArgument("disable-gpu");
+        options.AddArgument("headless");
+        options.AddArgument("remote-debugging-port=9222");
+        options.AddArgument("disable-gpu");
 
         //This option are OK to work on both local windows and gitHub Actions ubuntu
         options.AddArgument("no-sandbox");
@@ -28,10 +28,10 @@ public class BaseTestsClass
         options.AddArgument("windows-size=1920x1080");
         options.AddArgument("disable-extensions");
 
-
+        //This option are OK to work on windows local machine
         //options.AddUserProfilePreference("profile.password_manager_enabled", false);
         //options.AddArgument("--disable-search-engine-choice-screen");
-        
+
         driver = new ChromeDriver(options);
         driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(GlobalConstants.DEFAULT_TIMESPAN);
         basePage = new BasePageClass(driver);
