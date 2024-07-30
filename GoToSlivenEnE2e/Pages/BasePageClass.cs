@@ -19,19 +19,35 @@ namespace GoToSlivenEnE2e.Pages
         // Locate the links in the main menu
         // Actually they are a number of li elements -> //ul[@id="menu-primary-eng"]//li
 
-        private readonly By touristAttractionsLinkElement = By.XPath("//li[@id='menu-item-261']//a");
-        private readonly By mapLinkElement = By.XPath("//li[@id='menu-item-1216']//a");
-        private readonly By eventsLinkElement = By.XPath("//li[@id='menu-item-1963']//a");
-        private readonly By accommodationLinkElement = By.XPath("//li[@id='menu-item-3350']//a");
-        private readonly By hotelsLinkElement = By.XPath("//li[@id='menu-item-3347']//a");
-        private readonly By guestHousesLinkElement = By.XPath("//li[@id='menu-item-3360']//a");
-        private readonly By holodayHomesLinkElement = By.XPath("//li[@id='menu-item-3366']//a");
-        private readonly By hutsLinkElement = By.XPath("//li[@id='menu-item-3378']//a");
-        private readonly By campingsLinkElement = By.XPath("//li[@id='menu-item-3372']//a");
-        private readonly By restaurantsLinkElement = By.XPath("//li[@id='menu-item-3394']//a");
-        private readonly By pizzeriasLinkElement = By.XPath("//li[@id='menu-item-3442']//a");
-        private readonly By fastfoodLinkElement = By.XPath("//li[@id='menu-item-3526']//a");
-        private readonly By usefullLinkElement = By.XPath("//li[@id='menu-item-3199']//a");
+        private readonly By touristAttractionsLinkElement = By.XPath("//a[text()='Tourist Attractions']");
+        private readonly By mapLinkElement = By.XPath("//a[text()='Map']");
+        private readonly By eventsLinkElement = By.XPath("//a[text()='Events']");
+        private readonly By accommodationLinkElement = By.XPath("//a[text()='Accommodation']");
+        private readonly By hotelsLinkElement = By.XPath("//a[text()='Hotels']");
+        private readonly By guestHousesLinkElement = By.XPath("//a[text()='Guest House']");
+        private readonly By holodayHomesLinkElement = By.XPath("//a[text()='Holiday Homes']");
+        private readonly By hutsLinkElement = By.XPath("//a[text()='Hut & Cabins']");
+        private readonly By campingsLinkElement = By.XPath("//a[text()='Campings']");
+        private readonly By restaurantsLinkElement = By.XPath("//a[text()='Restaurants']");
+        private readonly By pizzeriasLinkElement = By.XPath("//a[text()='Pizzerias']");
+        private readonly By fastfoodLinkElement = By.XPath("//a[text()='Fast Food Restaurants']");
+        private readonly By usefullLinkElement = By.XPath("//a[text()='Useful']");
+
+        // Or we can map them by parent element - li tag with id
+
+        //private readonly By touristAttractionsLinkElement = By.XPath("//li[@id='menu-item-261']//a");
+        //private readonly By mapLinkElement = By.XPath("//li[@id='menu-item-1216']//a");
+        //private readonly By eventsLinkElement = By.XPath("//li[@id='menu-item-1963']//a");
+        //private readonly By accommodationLinkElement = By.XPath("//li[@id='menu-item-3350']//a");
+        //private readonly By hotelsLinkElement = By.XPath("//li[@id='menu-item-3347']//a");
+        //private readonly By guestHousesLinkElement = By.XPath("//li[@id='menu-item-3360']//a");
+        //private readonly By holodayHomesLinkElement = By.XPath("//li[@id='menu-item-3366']//a");
+        //private readonly By hutsLinkElement = By.XPath("//li[@id='menu-item-3378']//a");
+        //private readonly By campingsLinkElement = By.XPath("//li[@id='menu-item-3372']//a");
+        //private readonly By restaurantsLinkElement = By.XPath("//li[@id='menu-item-3394']//a");
+        //private readonly By pizzeriasLinkElement = By.XPath("//li[@id='menu-item-3442']//a");
+        //private readonly By fastfoodLinkElement = By.XPath("//li[@id='menu-item-3526']//a");
+        //private readonly By usefullLinkElement = By.XPath("//li[@id='menu-item-3199']//a");
 
         // Locate the logo of the site
         private readonly By logoElement =By.XPath("(//a[@href='https://gotosliven.com/']//img)[1]");
