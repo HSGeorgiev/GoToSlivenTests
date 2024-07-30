@@ -1,0 +1,25 @@
+name: On Push Pull Time Tests Execution
+
+On:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build
+    runs-on: ubuntu-latest
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Set up .Net
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: "6.0.x"
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Run tests
+      run: dotnet tests --verbosity normal
