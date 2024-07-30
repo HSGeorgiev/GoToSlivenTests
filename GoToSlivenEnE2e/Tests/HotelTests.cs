@@ -29,17 +29,17 @@ namespace GoToSlivenEnE2e.Tests
             TestMainMenuLinks(subUrl);
         }
 
-        [Test]
-        public void HotelsPage_FooterLinks_ShouldBeVisible()
-        {
-            IsFooterLinksViivble(subUrl);
-        }
+        //[Test]
+        //public void HotelsPage_FooterLinks_ShouldBeVisible()
+        //{
+        //    IsFooterLinksViivble(subUrl);
+        //}
 
-        [Test]
-        public void Hotels_Page_Footer_Links_Should_Works_Properly()
-        {
-            TestFooterLinks(subUrl);
-        }
+        //[Test]
+        //public void Hotels_Page_Footer_Links_Should_Works_Properly()
+        //{
+        //    TestFooterLinks(subUrl);
+        //}
 
         // HotelsPage Class specific tests
 

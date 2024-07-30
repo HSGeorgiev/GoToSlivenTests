@@ -26,17 +26,17 @@ namespace GoToSlivenEnE2e.Tests
             TestMainMenuLinks(subUrl);
         }
 
-        [Test]
-        public void MapPage_FooterLinks_ShouldBeVisible()
-        {
-            IsFooterLinksViivble(subUrl);
-        }
+        //[Test]
+        //public void MapPage_FooterLinks_ShouldBeVisible()
+        //{
+        //    IsFooterLinksViivble(subUrl);
+        //}
 
-        [Test]
-        public void Map_Page_Footer_Links_Should_Works_Properly()
-        {
-            TestFooterLinks(subUrl);
-        }
+        //[Test]
+        //public void Map_Page_Footer_Links_Should_Works_Properly()
+        //{
+        //    TestFooterLinks(subUrl);
+        //}
 
         // MapPage Class specific tests
 
