@@ -54,7 +54,8 @@ namespace GoToSlivenEnE2e.Pages
         
         public bool IsTopMenuDiplayed()
         {
-            return (FindElement(mapLinkElement).Displayed
+            return (FindElement(touristAttractionsLinkElement).Displayed
+                && FindElement(mapLinkElement).Displayed
                 && FindElement(eventsLinkElement).Displayed
                 && FindElement(accommodationLinkElement).Displayed
                 && FindElement(restaurantsLinkElement).Displayed

@@ -25,7 +25,8 @@ public class BaseTestsClass
         //This option are OK to work on both local windows and gitHub Actions ubuntu
         options.AddArgument("no-sandbox");
         options.AddArgument("disable-dev-shm-usage");
-        options.AddArgument("windows-size=1920x1080");
+        options.AddArgument("start-maximized");
+        //options.AddArgument("windows-size=1920x1080");
         //options.AddArgument("disable-extensions");
         options.AddArgument("start-maximized");
         //This option are OK to work on windows local machine
