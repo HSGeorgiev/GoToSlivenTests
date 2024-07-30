@@ -16,25 +16,22 @@ public class BaseTestsClass
     [SetUp]
     public void Setup()
     {
-        //some options of the WebDriver we should be able to change when needed
-        // also some directives here are due to use of the tests on gitHub actions platform
+        //This option should be commented when running on local windows
 
+        //options.AddArgument("headless");
+        //options.AddArgument("remote-debugging-port=9222");
+        //options.AddArgument("disable-gpu");
 
-        options.AddArgument("headless");
+        //This option are OK to work on both local windows and gitHub Actions ubuntu
         options.AddArgument("no-sandbox");
         options.AddArgument("disable-dev-shm-usage");
-        options.AddArgument("disable-gpu");
         options.AddArgument("windows-size=1920x1080");
-        //options.AddArgument("start-maximized");
         options.AddArgument("disable-extensions");
-        options.AddArgument("remote-debugging-port=9222");
-
-        options.AddUserProfilePreference("profile.password_manager_enabled", false);
-        options.AddArgument("--disable-search-engine-choice-screen");
-        // Comment following to use normal browser
-        //options.AddArgument("--headless");
 
 
+        //options.AddUserProfilePreference("profile.password_manager_enabled", false);
+        //options.AddArgument("--disable-search-engine-choice-screen");
+        
         driver = new ChromeDriver(options);
         driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(GlobalConstants.DEFAULT_TIMESPAN);
         basePage = new BasePageClass(driver);
