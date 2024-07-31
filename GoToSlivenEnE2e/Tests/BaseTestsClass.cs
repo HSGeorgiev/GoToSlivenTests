@@ -70,6 +70,8 @@ public class BaseTestsClass
         var basePage = new BasePageClass(driver);
         
         basePage.GoToUrl(subUrl);
+        Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+        screenshot.SaveAsFile("screenshot.png");
         Assert.IsTrue(basePage.AttractionsLinkIsProper(),
             "'Tourist Attractions' link does not work properly");
 
