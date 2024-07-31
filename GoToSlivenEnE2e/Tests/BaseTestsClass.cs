@@ -18,7 +18,7 @@ public class BaseTestsClass
     {
         //This option should be commented when running on local windows
 
-        //options.AddArgument("headless");
+        options.AddArgument("headless");
         //options.AddArgument("remote-debugging-port=9222");
         options.AddArgument("disable-gpu");
 
