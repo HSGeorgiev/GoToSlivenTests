@@ -2,7 +2,8 @@ name: On Push Pull Time Tests Execution
 
 on:
   schedule:
-    - cron: "10 22,4 * * *"
+    - cron: "30 22,4 * * *"
+
 jobs:
   build:
     runs-on: ubuntu-latest
