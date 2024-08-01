@@ -3,7 +3,7 @@
     public class GlobalConstants
     {
         public const string BASE_URL = "https://gotosliven.com";
-        public const int DEFAULT_TIMESPAN = 30;
+        public const int DEFAULT_TIMESPAN = 300;
     }
 
 
