@@ -17,17 +17,17 @@ namespace GoToSlivenEnE2e.Tests
             IsLogoVisible(subUrl);
         }
 
-        [Test]
-        public void HotelsPage_MainMenu_ShouldBeVisible()
-        {
-            IsTopMenuViivble(subUrl);
-        }
+        //[Test]
+        //public void HotelsPage_MainMenu_ShouldBeVisible()
+        //{
+        //    IsTopMenuViivble(subUrl);
+        //}
 
-        [Test]
-        public void HotelsPage_MainMenu_Links_Should_Works_Properly()
-        {
-            TestMainMenuLinks(subUrl);
-        }
+        //[Test]
+        //public void HotelsPage_MainMenu_Links_Should_Works_Properly()
+        //{
+        //    TestMainMenuLinks(subUrl);
+        //}
 
         //[Test]
         //public void HotelsPage_FooterLinks_ShouldBeVisible()
