@@ -2,7 +2,7 @@ name: On Push Pull Time Tests Execution
 
 on:
   schedule:
-    - cron:  '45 18 * * *'
+    - cron:  '55 18 * * *'
 
 jobs:
   build:
