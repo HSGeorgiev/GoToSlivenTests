@@ -1,4 +1,4 @@
-name: On Push Pull Time Tests Execution
+name: On Shedule Tests Execution
 
 on:
   schedule:
