@@ -16,7 +16,7 @@ public class BaseTestsClass
     [SetUp]
     public void Setup()
     {
-        //This option should be commented when running on local windows
+        ////This option should be commented when running on local windows
         options.AddArgument("headless");
         options.AddArgument("remote-debugging-port=9222");
         options.AddArgument("disable-gpu");
@@ -34,7 +34,7 @@ public class BaseTestsClass
         //options.AddArgument("disable-extensions");
 
         driver = new ChromeDriver(options);
-        driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(GlobalConstants.DEFAULT_TIMESPAN);
+        //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(GlobalConstants.DEFAULT_TIMESPAN);
         basePage = new BasePageClass(driver);
 
     }

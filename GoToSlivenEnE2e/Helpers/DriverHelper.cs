@@ -54,11 +54,6 @@ namespace GoToSlivenEnE2e.Helpers
 
         protected IReadOnlyCollection<IWebElement> FindElements(By by)
         {
-            // We pass a By class selector as argument here.
-            // Returns an collection of web elements IWebElement or throw an exception
-            // Would return an IReadOnlyCollection if By argument is a valid selector.
-            // Would throw an exception if By argument is not a valid selector.
-            // Would throw an exception if element/elements is/are not found within timeout, defined in GlobalConstants class.
 
             IReadOnlyCollection<IWebElement>? elements = null;
 

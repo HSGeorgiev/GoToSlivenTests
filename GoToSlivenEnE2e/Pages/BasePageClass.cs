@@ -12,8 +12,6 @@ namespace GoToSlivenEnE2e.Pages
         }
 
 
-
-
         // On the head of a base page
 
         // Locate the links in the main menu

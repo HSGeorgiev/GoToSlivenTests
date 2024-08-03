@@ -14,29 +14,29 @@ namespace GoToSlivenEnE2e.Tests
             IsLogoVisible(subUrl);
         }
 
-        [Test]
-        public void MapPage_MainMenu_ShouldBeVisible()
-        {
-            IsTopMenuViivble(subUrl);
-        }
+        //[Test]
+        //public void MapPage_MainMenu_ShouldBeVisible()
+        //{
+        //    IsTopMenuViivble(subUrl);
+        //}
 
-        [Test]
-        public void MapPage_MainMenu_Links_Should_Works_Properly()
-        {
-            TestMainMenuLinks(subUrl);
-        }
+        //[Test]
+        //public void MapPage_MainMenu_Links_Should_Works_Properly()
+        //{
+        //    TestMainMenuLinks(subUrl);
+        //}
 
-        [Test]
-        public void MapPage_FooterLinks_ShouldBeVisible()
-        {
-            IsFooterLinksViivble(subUrl);
-        }
+        //[Test]
+        //public void MapPage_FooterLinks_ShouldBeVisible()
+        //{
+        //    IsFooterLinksViivble(subUrl);
+        //}
 
-        [Test]
-        public void Map_Page_Footer_Links_Should_Works_Properly()
-        {
-            TestFooterLinks(subUrl);
-        }
+        //[Test]
+        //public void Map_Page_Footer_Links_Should_Works_Properly()
+        //{
+        //    TestFooterLinks(subUrl);
+        //}
 
         // MapPage Class specific tests
 

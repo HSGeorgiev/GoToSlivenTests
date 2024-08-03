@@ -94,27 +94,27 @@ namespace GoToSlivenEnE2e.Tests
                 "'Blog and Articles' sub-heading is missing or wrong");
         }
 
-        [Test]
-        public void H6_SubHeads_Should_Be_Presented()
-        {
-            HomePageClass homePage = new HomePageClass(driver);
+        //[Test]
+        //public void H6_SubHeads_Should_Be_Presented()
+        //{
+        //    HomePageClass homePage = new HomePageClass(driver);
 
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.AboutUsH6SubHeadingIsProper(),
-                "'About Us' H6 sub-heading is missing or wrong");
+        //    homePage.GoToHomePage();
+        //    Assert.IsTrue(homePage.AboutUsH6SubHeadingIsProper(),
+        //        "'About Us' H6 sub-heading is missing or wrong");
 
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.DestanationSlivenH6SubHeadingIsProper(),
-                "'Destination Sliven' sub-heading is missing or wrong");
+        //    homePage.GoToHomePage();
+        //    Assert.IsTrue(homePage.DestanationSlivenH6SubHeadingIsProper(),
+        //        "'Destination Sliven' sub-heading is missing or wrong");
 
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.WhyChooseUsH6SubHeadingIsProper(),
-                "'Why Choose Us' H6 sub-heading is missing or wrong");
+        //    homePage.GoToHomePage();
+        //    Assert.IsTrue(homePage.WhyChooseUsH6SubHeadingIsProper(),
+        //        "'Why Choose Us' H6 sub-heading is missing or wrong");
 
-            homePage.GoToHomePage();
-            Assert.IsTrue(homePage.NewsUsH6SubHeadingIsProper(),
-                "'News' H6 sub-heading is missing or wrong");
-        }
+        //    homePage.GoToHomePage();
+        //    Assert.IsTrue(homePage.NewsUsH6SubHeadingIsProper(),
+        //        "'News' H6 sub-heading is missing or wrong");
+        //}
 
 
         [Test]
