@@ -1,8 +1,12 @@
-name: On Push Pull Time Tests Execution
+name: On Shedule Tests Execution
 
 on:
   schedule:
+<<<<<<< HEAD
     - cron:  '40 18 * * *'
+=======
+    - cron: "30 15,3 * * *"
+>>>>>>> a74b29aa59443fd5e08c73c65e75239c5832235b
 
 jobs:
   build:
