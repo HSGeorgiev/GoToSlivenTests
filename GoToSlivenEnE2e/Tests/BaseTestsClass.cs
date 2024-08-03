@@ -28,10 +28,15 @@ public class BaseTestsClass
         //This option are OK to work on windows local machine
         //options.AddUserProfilePreference("profile.password_manager_enabled", false);
         //options.AddArgument("--disable-search-engine-choice-screen");
+        //options.AddArgument("no-sandbox");
+        //options.AddArgument("disable-dev-shm-usage");
+        //options.AddArgument("windows-size=1920x1080");
+        //options.AddArgument("disable-extensions");
 
         driver = new ChromeDriver(options);
         driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(GlobalConstants.DEFAULT_TIMESPAN);
         basePage = new BasePageClass(driver);
+
     }
 
     [TearDown]

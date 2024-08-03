@@ -61,60 +61,60 @@ namespace GoToSlivenEnE2e.Tests
 
         }
 
-        //[Test]
-        //public void SubHeadings_Should_Be_Presented()
-        //{
-        //    HomePageClass homePage = new HomePageClass(driver);
+        [Test]
+        public void SubHeadings_Should_Be_Presented()
+        {
+            HomePageClass homePage = new HomePageClass(driver);
 
-        //    homePage.GoToHomePage();
-        //    Assert.IsTrue(homePage.WelcomeSubHeadingIsProper(),
-        //        "'Welcome to Sliven' sub-heading is missing or wrong");
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.WelcomeSubHeadingIsProper(),
+                "'Welcome to Sliven' sub-heading is missing or wrong");
 
-        //    homePage.GoToHomePage();
-        //    Assert.IsTrue(homePage.TouristCentereSubHeadingIsProper(),
-        //        "'Tourist Centere' sub-heading is missing or wrong");
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.TouristCentereSubHeadingIsProper(),
+                "'Tourist Centere' sub-heading is missing or wrong");
 
-        //    homePage.GoToHomePage();
-        //    Assert.IsTrue(homePage.ExploreSubHeadingIsProper(),
-        //        "'Explore' sub-heading is missing or wrong");
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.ExploreSubHeadingIsProper(),
+                "'Explore' sub-heading is missing or wrong");
 
-        //    homePage.GoToHomePage();
-        //    Assert.IsTrue(homePage.EventsSubHeadingIsProper(),
-        //        "'Events' sub-heading is missing or wrong");
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.EventsSubHeadingIsProper(),
+                "'Events' sub-heading is missing or wrong");
 
-        //    // ExploreOnTheMapsSubHeadingIsProper method doesn't work properly if
-        //    // headless browser options is used!
-        //    // Either do not use headless browser or do not execute tne next Assert
-        //    homePage.GoToHomePage();
-        //    Assert.IsTrue(homePage.ExploreOnTheMapsSubHeadingIsProper(),
-        //        "'Explore On The Map' sub-heading is missing or wrong");
+            // ExploreOnTheMapsSubHeadingIsProper method doesn't work properly if
+            // headless browser options is used!
+            // Either do not use headless browser or do not execute tne next Assert
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.ExploreOnTheMapsSubHeadingIsProper(),
+                "'Explore On The Map' sub-heading is missing or wrong");
 
-        //    homePage.GoToHomePage();
-        //    Assert.IsTrue(homePage.BlogArticleSubHeadingIsProper(),
-        //        "'Blog and Articles' sub-heading is missing or wrong");
-        //}
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.BlogArticleSubHeadingIsProper(),
+                "'Blog and Articles' sub-heading is missing or wrong");
+        }
 
-        //[Test]
-        //public void H6_SubHeads_Should_Be_Presented()
-        //{
-        //    HomePageClass homePage = new HomePageClass(driver);
+        [Test]
+        public void H6_SubHeads_Should_Be_Presented()
+        {
+            HomePageClass homePage = new HomePageClass(driver);
 
-        //    homePage.GoToHomePage();
-        //    Assert.IsTrue(homePage.AboutUsH6SubHeadingIsProper(),
-        //        "'About Us' H6 sub-heading is missing or wrong");
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.AboutUsH6SubHeadingIsProper(),
+                "'About Us' H6 sub-heading is missing or wrong");
 
-        //    homePage.GoToHomePage();
-        //    Assert.IsTrue(homePage.DestanationSlivenH6SubHeadingIsProper(),
-        //        "'Destination Sliven' sub-heading is missing or wrong");
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.DestanationSlivenH6SubHeadingIsProper(),
+                "'Destination Sliven' sub-heading is missing or wrong");
 
-        //    homePage.GoToHomePage();
-        //    Assert.IsTrue(homePage.WhyChooseUsH6SubHeadingIsProper(),
-        //        "'Why Choose Us' H6 sub-heading is missing or wrong");
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.WhyChooseUsH6SubHeadingIsProper(),
+                "'Why Choose Us' H6 sub-heading is missing or wrong");
 
-        //    homePage.GoToHomePage();
-        //    Assert.IsTrue(homePage.NewsUsH6SubHeadingIsProper(),
-        //        "'News' H6 sub-heading is missing or wrong");
-        //}
+            homePage.GoToHomePage();
+            Assert.IsTrue(homePage.NewsUsH6SubHeadingIsProper(),
+                "'News' H6 sub-heading is missing or wrong");
+        }
 
 
         [Test]
