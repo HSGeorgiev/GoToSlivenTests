@@ -11,6 +11,7 @@ namespace GoToSlivenEnE2e.Pages
         {
         }
 
+        // Page element changed!
 
         // On the head of a base page
 

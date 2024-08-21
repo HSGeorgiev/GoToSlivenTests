@@ -16,6 +16,10 @@ public class BaseTestsClass
     [SetUp]
     public void Setup()
     {
+
+        // To set ChromeOptions against new page design
+
+
         ////This option should be commented when running on local windows
         options.AddArgument("headless");
         options.AddArgument("remote-debugging-port=9222");
