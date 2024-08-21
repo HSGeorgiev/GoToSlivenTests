@@ -6,6 +6,8 @@ using GoToSlivenEnE2e.Globals;
 
 namespace GoToSlivenEnE2e.Helpers
 {
+
+// To be changed with ProjectsTests Helper
     public class DriverHelper
     {
         protected readonly IWebDriver driver;
